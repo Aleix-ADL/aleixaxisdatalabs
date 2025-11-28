@@ -1,0 +1,167 @@
+taxonomy:
+  - id: food_hospitality
+    name: "Food & Hospitality"
+    children:
+      - id: food_hospitality.restaurants
+        name: "Restaurants"
+        children:
+          - id: food_hospitality.restaurants.fast_food
+            name: "Fast Food"
+          - id: food_hospitality.restaurants.casual_dining
+            name: "Casual Dining"
+          - id: food_hospitality.restaurants.fine_dining
+            name: "Fine Dining"
+          - id: food_hospitality.restaurants.buffet
+            name: "Buffet Restaurants"
+
+      - id: food_hospitality.bars_pubs
+        name: "Bars & Pubs"
+        children:
+          - id: food_hospitality.bars_pubs.cocktail_bars
+            name: "Cocktail Bars"
+          - id: food_hospitality.bars_pubs.sports_bars
+            name: "Sports Bars"
+          - id: food_hospitality.bars_pubs.wine_bars
+            name: "Wine Bars"
+
+      - id: food_hospitality.cafes_bakeries
+        name: "Cafés & Bakeries"
+        children:
+          - id: food_hospitality.cafes_bakeries.coffee_shops
+            name: "Coffee Shops"
+          - id: food_hospitality.cafes_bakeries.pastry_shops
+            name: "Pastry Shops"
+          - id: food_hospitality.cafes_bakeries.artisan_bakeries
+            name: "Artisan Bakeries"
+
+  - id: marketing_events
+    name: "Marketing & Events"
+    children:
+      - id: marketing_events.marketing_agencies
+        name: "Marketing Agencies"
+        children:
+          - id: marketing_events.marketing_agencies.digital_marketing
+            name: "Digital Marketing"
+          - id: marketing_events.marketing_agencies.branding
+            name: "Branding Agencies"
+          - id: marketing_events.marketing_agencies.content_marketing
+            name: "Content Marketing"
+
+      - id: marketing_events.event_agencies
+        name: "Event Agencies"
+        children:
+          - id: marketing_events.event_agencies.corporate_events
+            name: "Corporate Events"
+          - id: marketing_events.event_agencies.teambuilding
+            name: "Teambuilding Activities"
+          - id: marketing_events.event_agencies.trade_shows
+            name: "Trade Shows"
+
+      - id: marketing_events.advertising
+        name: "Advertising & Media"
+        children:
+          - id: marketing_events.advertising.media_buying
+            name: "Media Buying"
+          - id: marketing_events.advertising.creative_agencies
+            name: "Creative Agencies"
+          - id: marketing_events.advertising.outdoor_advertising
+            name: "Outdoor Advertising"
+
+  - id: healthcare
+    name: "Healthcare"
+    children:
+      - id: healthcare.clinics
+        name: "Clinics"
+        children:
+          - id: healthcare.clinics.dental_clinics
+            name: "Dental Clinics"
+          - id: healthcare.clinics.physiotherapy_clinics
+            name: "Physiotherapy Clinics"
+          - id: healthcare.clinics.dermatology_clinics
+            name: "Dermatology Clinics"
+
+      - id: healthcare.medical_practices
+        name: "Medical Practices"
+        children:
+          - id: healthcare.medical_practices.general_practice
+            name: "General Practitioners"
+          - id: healthcare.medical_practices.pediatrics
+            name: "Pediatrics"
+          - id: healthcare.medical_practices.cardiology
+            name: "Cardiology"
+
+      - id: healthcare.fitness_wellness
+        name: "Fitness & Wellness"
+        children:
+          - id: healthcare.fitness_wellness.gyms
+            name: "Gyms"
+          - id: healthcare.fitness_wellness.yoga_studios
+            name: "Yoga Studios"
+          - id: healthcare.fitness_wellness.pilates_studios
+            name: "Pilates Studios"
+
+  - id: software_it
+    name: "Software & IT"
+    children:
+      - id: software_it.saas
+        name: "SaaS Companies"
+        children:
+          - id: software_it.saas.crm
+            name: "CRM Platforms"
+          - id: software_it.saas.analytics
+            name: "Analytics Platforms"
+          - id: software_it.saas.communication
+            name: "Communication/Chat Tools"
+
+      - id: software_it.it_services
+        name: "IT Services"
+        children:
+          - id: software_it.it_services.cybersecurity
+            name: "Cybersecurity Services"
+          - id: software_it.it_services.managed_it
+            name: "Managed IT Services"
+          - id: software_it.it_services.cloud_consulting
+            name: "Cloud Consulting"
+
+      - id: software_it.development_agencies
+        name: "Development Agencies"
+        children:
+          - id: software_it.development_agencies.web_dev
+            name: "Web Development"
+          - id: software_it.development_agencies.mobile_dev
+            name: "Mobile App Development"
+          - id: software_it.development_agencies.custom_software
+            name: "Custom Software Development"
+
+  - id: retail_ecommerce
+    name: "Retail & E-commerce"
+    children:
+      - id: retail_ecommerce.physical_retail
+        name: "Physical Retail"
+        children:
+          - id: retail_ecommerce.physical_retail.clothing_stores
+            name: "Clothing Stores"
+          - id: retail_ecommerce.physical_retail.shoe_stores
+            name: "Shoe Stores"
+          - id: retail_ecommerce.physical_retail.sports_stores
+            name: "Sports Stores"
+
+      - id: retail_ecommerce.ecommerce
+        name: "E-commerce Businesses"
+        children:
+          - id: retail_ecommerce.ecommerce.dropshipping
+            name: "Dropshipping"
+          - id: retail_ecommerce.ecommerce.dtc_brands
+            name: "Direct-to-Consumer Brands"
+          - id: retail_ecommerce.ecommerce.marketplace_sellers
+            name: "Marketplace Sellers"
+
+      - id: retail_ecommerce.wholesale
+        name: "Wholesale & Distribution"
+        children:
+          - id: retail_ecommerce.wholesale.food_distributors
+            name: "Food Distributors"
+          - id: retail_ecommerce.wholesale.industrial_supplies
+            name: "Industrial Supplies"
+          - id: retail_ecommerce.wholesale.office_supplies
+            name: "Office Supplies"

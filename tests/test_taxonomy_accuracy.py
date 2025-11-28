@@ -1,5 +1,9 @@
 import pytest
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+
 from src.embeddings import get_embedding
 from src.qdrant import client  # your initialized Qdrant client
 
@@ -10,7 +14,7 @@ COLLECTION_NAME = os.getenv("QDRANT_COLLECTION", "taxonomy")
 @pytest.mark.parametrize("query, expected_top", [
     ("Frankfurt restaurants", "Restaurant"),
     ("Gourmet burgers", "Burger restaurant"),
-    ("Hotdogs", "Hotdog restaurant"),
+    ("Hotdogs stands", "Hotdog restaurant"),
     ("Sushi places", "Sushi restaurant"),
     ("Italian food", "Italian restaurant"),
 ])
@@ -23,11 +27,12 @@ def test_taxonomy_search_accuracy(query, expected_top):
     vector = get_embedding(query)
 
     # 2. Search Qdrant (top 5)
-    results = client.search(
+    results = client.query_points(
         collection_name=COLLECTION_NAME,
-        query_vector=vector,
-        limit=5,
-    )
+        query=vector,
+        limit=5
+    ).points
+
 
     assert len(results) > 0, "Qdrant returned no results."
 

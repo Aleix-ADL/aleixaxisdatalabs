@@ -22,7 +22,8 @@ def create_taxonomy_collection(collection_name="taxonomy"):
     client.recreate_collection(
         collection_name=collection_name,
         vectors_config=VectorParams(
-            size=1536,  # embedding size for text-embedding-3-small
+            size=1536,
+            # # embedding size for text-embedding-3-small
             distance=Distance.COSINE
         )
     )

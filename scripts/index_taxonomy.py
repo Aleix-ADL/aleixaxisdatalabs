@@ -10,6 +10,8 @@ from qdrant_client.http.models import PointStruct
 
 from src.taxonomy_loader import load_taxonomy
 from src.embeddings import get_embedding
+from src.qdrant import create_taxonomy_collection
+
 
 load_dotenv()
 
@@ -23,13 +25,16 @@ client = QdrantClient(
 )
 
 def index_taxonomy():
+    create_taxonomy_collection(COLLECTION_NAME)
     print("Loading taxonomy...")
     items = load_taxonomy()
 
     points = []
 
     for i, item in enumerate(items):
-        vector = get_embedding(item["name"])  # embedding text
+        # vector = get_embedding(item["name"])  # embedding text
+        vector = get_embedding(item["text"])
+
 
         points.append(
             PointStruct(
