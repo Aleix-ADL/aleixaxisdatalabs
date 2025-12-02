@@ -1,26 +1,26 @@
-# import yaml
+# Old code
+    # import yaml
+    # def load_taxonomy(path: str = "industries.yaml") -> list[dict]:
+    #     """
+    #     Loads the hierarchical taxonomy and flattens it into a list of nodes.
+    #     Returns a list of dicts: {id, name}
+    #     """
+    #     with open(path, "r", encoding="utf-8") as f:
+    #         data = yaml.safe_load(f)
 
-# def load_taxonomy(path: str = "industries.yaml") -> list[dict]:
-#     """
-#     Loads the hierarchical taxonomy and flattens it into a list of nodes.
-#     Returns a list of dicts: {id, name}
-#     """
-#     with open(path, "r", encoding="utf-8") as f:
-#         data = yaml.safe_load(f)
+    #     flat = []
 
-#     flat = []
+    #     def recurse(nodes):
+    #         for node in nodes:
+    #             flat.append({
+    #                 "id": node["id"],
+    #                 "name": node["name"]
+    #             })
+    #             if "children" in node:
+    #                 recurse(node["children"])
 
-#     def recurse(nodes):
-#         for node in nodes:
-#             flat.append({
-#                 "id": node["id"],
-#                 "name": node["name"]
-#             })
-#             if "children" in node:
-#                 recurse(node["children"])
-
-#     recurse(data["taxonomy"])
-#     return flat
+    #     recurse(data["taxonomy"])
+    #     return flat
 
 import yaml
 
@@ -39,7 +39,7 @@ def load_taxonomy(path: str = "industries.yaml") -> list[dict]:
             name = node.get("name", "")
             description = node.get("description", "")
             keywords = node.get("keywords", [])
-
+ 
             # Build final text to embed
             text_parts = [name]
             if description:
