@@ -53,25 +53,27 @@ def index_taxonomy():
             vector=vector,
             payload=payload
         ))
-    # for i, item in enumerate(items):
 
-    #     vector = get_embedding(item["text"])
+    # Old code no batch embedding 
+        # for i, item in enumerate(items):
 
-    #     # Create payload with metadata
-    #     payload = item.copy()  # keep all original fields
-    #     payload.update({
-    #         "taxonomy_id": item["id"],
-    #         "model": MODEL,
-    #         "updated_at": datetime.now(timezone.utc).isoformat()
-    #     })
+        #     vector = get_embedding(item["text"])
 
-    #     points.append(
-    #         PointStruct(
-    #             id=i,  # <-- FIXED: numeric ID, required by Qdrant
-    #             vector=vector,
-    #             payload=payload  # include full taxonomy item
-    #         )
-    #     )
+        #     # Create payload with metadata
+        #     payload = item.copy()  # keep all original fields
+        #     payload.update({
+        #         "taxonomy_id": item["id"],
+        #         "model": MODEL,
+        #         "updated_at": datetime.now(timezone.utc).isoformat()
+        #     })
+
+        #     points.append(
+        #         PointStruct(
+        #             id=i,  # <-- FIXED: numeric ID, required by Qdrant
+        #             vector=vector,
+        #             payload=payload  # include full taxonomy item
+        #         )
+        #     )
 
     print(f"Inserting {len(points)} items into Qdrant...")
 
